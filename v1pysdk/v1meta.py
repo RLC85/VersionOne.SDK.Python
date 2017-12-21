@@ -120,10 +120,11 @@ class V1Meta(object):
         node.set('name', attrname)
         node.set('act', 'set')
         if isinstance(newvalue, unicode) != True:
-            node.text = str(newvalue).decode('utf-8')
+          node.text = str(newvalue).decode('utf-8')
         else:
-            node.text = newvalue
-       update_doc.append(node)
+          node.text = newvalue
+        update_doc.append(node)
+
     return update_doc
     
   def create_asset(self, asset_type_name, newdata):
